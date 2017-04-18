@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014379AB1EA687A200C023A1 /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 014379AA1EA687A200C023A1 /* EmployeeDatabase.m */; };
 		015C5EDC1EA5250F00F34B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EDB1EA5250F00F34B1F /* main.m */; };
 		015C5EDF1EA5250F00F34B1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EDE1EA5250F00F34B1F /* AppDelegate.m */; };
 		015C5EE21EA5250F00F34B1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EE11EA5250F00F34B1F /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014379A91EA687A200C023A1 /* EmployeeDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDatabase.h; sourceTree = "<group>"; };
+		014379AA1EA687A200C023A1 /* EmployeeDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDatabase.m; sourceTree = "<group>"; };
 		015C5ED71EA5250F00F34B1F /* Intro_to_objective-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intro_to_objective-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015C5EDB1EA5250F00F34B1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		015C5EDD1EA5250F00F34B1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 		015C5F031EA5A66E00F34B1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				014379A91EA687A200C023A1 /* EmployeeDatabase.h */,
+				014379AA1EA687A200C023A1 /* EmployeeDatabase.m */,
 				015C5EF81EA5682600F34B1F /* NSString+NSString_Category.h */,
 				015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */,
 				015C5EF11EA52F0700F34B1F /* Person.h */,
@@ -201,6 +206,7 @@
 			files = (
 				015C5EE21EA5250F00F34B1F /* ViewController.m in Sources */,
 				015C5EFA1EA5682600F34B1F /* NSString+NSString_Category.m in Sources */,
+				014379AB1EA687A200C023A1 /* EmployeeDatabase.m in Sources */,
 				015C5EDF1EA5250F00F34B1F /* AppDelegate.m in Sources */,
 				015C5EF61EA5454C00F34B1F /* ViewController+Identifier.m in Sources */,
 				015C5EF31EA52F0700F34B1F /* Person.m in Sources */,

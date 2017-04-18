@@ -11,6 +11,7 @@
 #import "Person.h"
 #import "NSString+NSString_Category.h"
 
+
 static int gMoveNumber = 10;
 
 @interface ViewController () <ViewControllerDataSource>
@@ -43,6 +44,48 @@ static int gMoveNumber = 10;
     NSString *reversedString = [NSString reverseStringMethod:phrase];
     
     NSLog(@"%@ is the reversed string.", reversedString);
+    
+    
+    // Switch and Arrays
+    NSNumber *num1 = @123;
+    NSNumber *num2 = @321;
+    
+    switch ([num1 compare: num2]) {
+        case NSOrderedSame:
+            NSLog(@"Numbers are equal");
+            break;
+        case NSOrderedAscending:
+            NSLog(@"Less Than");
+        case NSOrderedDescending:
+            NSLog(@"Greater Than");
+        default:
+            break;
+    }
+    
+    NSString *string1 = @"One";
+    NSString *string2 = @"Two";
+    NSString *string3 = @"Three";
+    
+    NSNumber *number = @100;
+    
+    //mutable Array
+    NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:string1,string2,string3, nil];
+    
+    [array addObject:number];
+    
+    //mutable Dictionary
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary:@{@"firstName":@"Adam",@"lastName":@"Wallraff",@"age":@30}];
+    
+    [dictionary setObject:@"dog" forKey:@"pet"];
+    
+    NSString *firstName = dictionary[@"firstName"];
+    
+    dictionary[@"car"] = @"Subaru";
+    
+//    EmployeeDatabase *test = [[EmployeeDatabase alloc]init];
+//    
+//    NSLog(@"%@",[test documentsDirectory]);
+//    NSLog(@"%@",[test archiveURL]);
 }
 
 -(void)requiredNumberForEachItem:(int)number{

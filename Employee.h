@@ -10,8 +10,8 @@
 
 @interface Employee : Person
 
-@property int employeeNumber;
-@property int yearsEmployed;
+@property NSInteger employeeNumber;
+@property NSInteger yearsEmployed;
 @property(strong,nonatomic) NSString *managerName;
 
 

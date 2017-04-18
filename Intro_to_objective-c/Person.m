@@ -12,15 +12,15 @@
 
 NSString *_name; //underlying instance variable
 
-////Getter
-//-(NSString *)name{
-//    return _name;
-//}
-//
-////Setter
-//-(void)setName:(NSString *)name{
-//    _name = name;
-//}
+//Getter
+-(NSString *)name{
+    return _name;
+}
+
+//Setter
+-(void)setName:(NSString *)name{
+    _name = name;
+}
 
 
 -(void)walk{

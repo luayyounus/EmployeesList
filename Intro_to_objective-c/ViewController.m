@@ -11,6 +11,7 @@
 #import "Person.h"
 #import "NSString+NSString_Category.h"
 #import "Employee.h"
+#import "EmployeeDatabase.h"
 
 
 //static int gMoveNumber = 10;
@@ -23,21 +24,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    //accessing the singleton
+    [[EmployeeDatabase shared] allEmployees];
     
-    Employee *original = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed: @2 andManager:@"Brook"];
-    
-    Employee *newInstructor = [original copy];
-    newInstructor.firstName = @"Mike";
-    
-    NSLog(original.firstName);
-    
-    Person *name = [[Person alloc]init];
-    
+//    Employee *original = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed: @2 andManager:@"Brook"];
+//    
+//    Employee *newInstructor = [original copy];
+//    newInstructor.firstName = @"Mike";
+//    
+//    NSLog(original.firstName);
+//    
+//    Person *name = [[Person alloc]init];
+//    
 //    [name setName:@"Luay"];
 //    
 //    NSString *personName = [name name];
     
-    [name walk];
+//    [name walk];
     
     [Person sayHello];
     

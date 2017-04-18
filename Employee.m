@@ -10,9 +10,11 @@
 
 @implementation Employee
 
-NSInteger _employeeNumber;
-NSInteger _yearsEmployed;
+NSNumber *_employeeNumber;
+NSNumber *_yearsEmployed;
 NSString *_managerName;
+
+
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
@@ -38,31 +40,33 @@ NSString *_managerName;
     return employee;
 }
 
+
+
+-(NSNumber *)employeeNumber{
+    return _employeeNumber;
+}
+-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
+    _employeeNumber = employeeNumber;
+}
+
+
+
+-(NSNumber *)yearsEmployed{
+    return _yearsEmployed;
+}
+-(void)setYearsEmployed:(NSNumber *)yearsEmployed{
+    _yearsEmployed = yearsEmployed;
+}
+
+
+
+-(NSString *)managerName{
+    return _managerName;
+}
+-(void)setManagerName:(NSString *)managerName{
+    _managerName = managerName;
+}
+
+
+
 @end
-
-
-//-(NSNumber *)employeeNumber{
-//    return _employeeNumber;
-//}
-//-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
-//    _employeeNumber = employeeNumber;
-//}
-//
-//
-//
-//-(NSNumber *)yearsEmployed{
-//    return _yearsEmployed;
-//}
-//-(void)setYearsEmployed:(NSNumber *)yearsEmployed{
-//    _yearsEmployed = yearsEmployed;
-//}
-
-//
-//
-//-(NSString *)managerName{
-//    return _managerName;
-//}
-//-(void)setManagerName:(NSString *)managerName{
-//    _managerName = managerName;
-//}
-

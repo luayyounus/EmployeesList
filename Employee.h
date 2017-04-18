@@ -15,10 +15,21 @@
 @property(strong,nonatomic) NSString *managerName;
 
 
+-(NSNumber *)employeeNumber;
+-(void)setEmployeeNumber:(NSNumber *)employeeNumber;
+-(NSNumber *)yearsEmployed;
+
+
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
                              age:(NSNumber *)age
                    yearsEmployed:(NSNumber *)yearsEmployed
                   andManager:(NSString *)managerName;
+
+-(void)setYearsEmployed:(NSNumber *)yearsEmployed;
+
+
+-(NSString *)managerName;
+-(void)setManagerName:(NSString *)managerName;
 
 @end

@@ -21,11 +21,11 @@ NSString *seperator = @" ";
     
     NSString *result = [NSMutableString stringWithString: @""];
     
-    NSUInteger length = [myString length];
+    int length = (int)[myString length];
     
-    NSUInteger index;
+    int index;
     
-    for (index = length-1 ; index > 0 ; index--){
+    for (index = length -1 ; index >= 0 ; index--){
         unichar character = [myString characterAtIndex:index];
         result = [result stringByAppendingFormat:@"%c", character];
         

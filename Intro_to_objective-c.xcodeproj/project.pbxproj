@@ -16,6 +16,7 @@
 		015C5EF31EA52F0700F34B1F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF21EA52F0700F34B1F /* Person.m */; };
 		015C5EF61EA5454C00F34B1F /* ViewController+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF51EA5454C00F34B1F /* ViewController+Identifier.m */; };
 		015C5EFA1EA5682600F34B1F /* NSString+NSString_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */; };
+		015C5EFD1EA59A4000F34B1F /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EFC1EA59A4000F34B1F /* Employee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		015C5EF71EA5482400F34B1F /* ViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDataSource.h; sourceTree = "<group>"; };
 		015C5EF81EA5682600F34B1F /* NSString+NSString_Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSString_Category.h"; sourceTree = "<group>"; };
 		015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSString_Category.m"; sourceTree = "<group>"; };
+		015C5EFB1EA59A4000F34B1F /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		015C5EFC1EA59A4000F34B1F /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				015C5EE11EA5250F00F34B1F /* ViewController.m */,
 				015C5EF11EA52F0700F34B1F /* Person.h */,
 				015C5EF21EA52F0700F34B1F /* Person.m */,
+				015C5EFB1EA59A4000F34B1F /* Employee.h */,
+				015C5EFC1EA59A4000F34B1F /* Employee.m */,
 				015C5EE31EA5250F00F34B1F /* Main.storyboard */,
 				015C5EE61EA5250F00F34B1F /* Assets.xcassets */,
 				015C5EE81EA5250F00F34B1F /* LaunchScreen.storyboard */,
@@ -174,6 +179,7 @@
 				015C5EF61EA5454C00F34B1F /* ViewController+Identifier.m in Sources */,
 				015C5EF31EA52F0700F34B1F /* Person.m in Sources */,
 				015C5EDC1EA5250F00F34B1F /* main.m in Sources */,
+				015C5EFD1EA59A4000F34B1F /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

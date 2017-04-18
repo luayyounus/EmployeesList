@@ -12,10 +12,6 @@
 
 NSString *_name; //underlying instance variable
 
-NSString *_firstName;
-NSString *_lastName;
-int *_age;
-
 ////Getter
 //-(NSString *)name{
 //    return _name;

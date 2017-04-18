@@ -39,6 +39,7 @@
 		015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSString_Category.m"; sourceTree = "<group>"; };
 		015C5EFE1EA59E1D00F34B1F /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = ../Employee.h; sourceTree = "<group>"; };
 		015C5EFF1EA59E1D00F34B1F /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = ../Employee.m; sourceTree = "<group>"; };
+		015C5F011EA5A5E800F34B1F /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,22 +72,9 @@
 		015C5ED91EA5250F00F34B1F /* Intro_to_objective-c */ = {
 			isa = PBXGroup;
 			children = (
-				015C5EDD1EA5250F00F34B1F /* AppDelegate.h */,
-				015C5EF41EA5454C00F34B1F /* ViewController+Identifier.h */,
-				015C5EF81EA5682600F34B1F /* NSString+NSString_Category.h */,
-				015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */,
-				015C5EF51EA5454C00F34B1F /* ViewController+Identifier.m */,
-				015C5EDE1EA5250F00F34B1F /* AppDelegate.m */,
-				015C5EF71EA5482400F34B1F /* ViewControllerDataSource.h */,
-				015C5EE01EA5250F00F34B1F /* ViewController.h */,
-				015C5EE11EA5250F00F34B1F /* ViewController.m */,
-				015C5EF11EA52F0700F34B1F /* Person.h */,
-				015C5EF21EA52F0700F34B1F /* Person.m */,
-				015C5EFE1EA59E1D00F34B1F /* Employee.h */,
-				015C5EFF1EA59E1D00F34B1F /* Employee.m */,
-				015C5EE31EA5250F00F34B1F /* Main.storyboard */,
-				015C5EE61EA5250F00F34B1F /* Assets.xcassets */,
-				015C5EE81EA5250F00F34B1F /* LaunchScreen.storyboard */,
+				015C5F041EA5A67300F34B1F /* Controller */,
+				015C5F031EA5A66E00F34B1F /* Model */,
+				015C5F021EA5A65D00F34B1F /* View */,
 				015C5EEB1EA5250F00F34B1F /* Info.plist */,
 				015C5EDA1EA5250F00F34B1F /* Supporting Files */,
 			);
@@ -99,6 +87,44 @@
 				015C5EDB1EA5250F00F34B1F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		015C5F021EA5A65D00F34B1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				015C5EE31EA5250F00F34B1F /* Main.storyboard */,
+				015C5EE61EA5250F00F34B1F /* Assets.xcassets */,
+				015C5EE81EA5250F00F34B1F /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		015C5F031EA5A66E00F34B1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				015C5EF81EA5682600F34B1F /* NSString+NSString_Category.h */,
+				015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */,
+				015C5EF11EA52F0700F34B1F /* Person.h */,
+				015C5EF21EA52F0700F34B1F /* Person.m */,
+				015C5EFE1EA59E1D00F34B1F /* Employee.h */,
+				015C5EFF1EA59E1D00F34B1F /* Employee.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		015C5F041EA5A67300F34B1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				015C5EE01EA5250F00F34B1F /* ViewController.h */,
+				015C5EE11EA5250F00F34B1F /* ViewController.m */,
+				015C5EF41EA5454C00F34B1F /* ViewController+Identifier.h */,
+				015C5EF51EA5454C00F34B1F /* ViewController+Identifier.m */,
+				015C5EF71EA5482400F34B1F /* ViewControllerDataSource.h */,
+				015C5F011EA5A5E800F34B1F /* PersonQueue.h */,
+				015C5EDD1EA5250F00F34B1F /* AppDelegate.h */,
+				015C5EDE1EA5250F00F34B1F /* AppDelegate.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

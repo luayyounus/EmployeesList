@@ -12,21 +12,21 @@
 
 NSString *_name; //underlying instance variable
 
+//Getter
+-(NSString *)name{
+    return _name;
+}
 
-////Getter
-//-(NSString *)name{
-//    return _name;
-//}
-//
-////Setter
-//-(void)setName:(NSString *)name{
-//    _name = name;
-//}
+//Setter
+-(void)setName:(NSString *)name{
+    _name = name;
+}
 
 
 -(void)walk{
     
     NSString *name = [self name];
+    
     
     // NSLog is the print statement //%@ is the place holder for name
     NSLog(@"%@ I am walking...", name);

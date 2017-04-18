@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 #import "ViewControllerDataSource.h"
-
 #import "Person.h"
+#import "NSString+NSString_Category.h"
 
 static int gMoveNumber = 10;
 
@@ -22,18 +22,27 @@ static int gMoveNumber = 10;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Person *adam = [[Person alloc]init];
+    Person *name = [[Person alloc]init];
     
-    [adam setName:@"Adam"];
+    [name setName:@"Luay"];
     
-//    NSString *personName = [adam name];
+    NSString *personName = [name name];
     
-    [adam walk];
+    [name walk];
     
     [Person sayHello];
     
     [self requiredNumberForEachItem:443];
     
+    NSString *phrase = @"This is Bullshit";
+    
+    NSArray *resultsOfArray = [phrase stringArray];
+    
+    NSLog(@"%@ is the Array we got back.", resultsOfArray);
+    
+    NSString *reversedString = [NSString reverseStringMethod:phrase];
+    
+    NSLog(@"%@ is the reversed string.", reversedString);
 }
 
 -(void)requiredNumberForEachItem:(int)number{

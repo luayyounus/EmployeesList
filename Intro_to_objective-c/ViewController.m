@@ -10,6 +10,7 @@
 #import "ViewControllerDataSource.h"
 #import "Person.h"
 #import "NSString+NSString_Category.h"
+#import "Employee.h"
 
 
 //static int gMoveNumber = 10;
@@ -22,6 +23,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    Employee *original = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed: @2 andManager:@"Brook"];
+    
+    Employee *newInstructor = [original copy];
+    newInstructor.firstName = @"Mike";
+    
+    NSLog(original.firstName);
     
     Person *name = [[Person alloc]init];
     

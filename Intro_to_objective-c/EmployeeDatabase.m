@@ -8,9 +8,10 @@
 
 #import "EmployeeDatabase.h"
 
+
 @interface EmployeeDatabase()
 
-@property (strong,nonatomic) NSArray *employees;
+@property (strong,nonatomic) NSMutableArray *employees;
 
 @end
 
@@ -31,6 +32,35 @@
     });
     return shared;
 }
+
+-(NSMutableArray *)allEmployees{
+    return _employees;
+}
+-(NSInteger)count{
+    return [_employees count];
+}
+
+-(Employee *)employeeAtIndex:(int)index{
+    return [_employees objectAtIndex:index];
+}
+
+-(void)add:(Employee *)employee{
+    [_employees addObject:employee];
+}
+
+-(void)remove:(Employee *)employee{
+    [_employees removeObject:employee];
+}
+
+-(void)removeEmployeeAtIndex:(Employee *)employee atIndex:(int)index{
+    [_employees removeObjectAtIndex:index];
+}
+
+-(void)removeAllEmployees{
+    [_employees removeAllObjects];
+}
+
+
 
 //MARK: Helper Methods
 -(NSURL *)documentsDirectory{

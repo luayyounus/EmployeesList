@@ -13,8 +13,8 @@
 
 +(instancetype)shared;
 
+-(NSMutableArray *)allEmployees;
 -(NSInteger)count;
--(NSArray *)allEmployees;
 -(Employee *)employeeAtIndex:(int)index;
 
 -(void)add:(Employee *)employee;

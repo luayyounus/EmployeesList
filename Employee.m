@@ -10,8 +10,4 @@
 
 @implementation Employee
 
-int *_employeeNumber;
-int *_yearsEmployed;
-NSString *_managerName;
-
 @end

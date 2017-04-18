@@ -6,12 +6,13 @@
 //  Copyright © 2017 Luay Younus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Person.h"
 
-@interface Employee : NSObject
+@interface Employee : Person
 
 @property int employeeNumber;
 @property int yearsEmployed;
 @property(strong,nonatomic) NSString *managerName;
+
 
 @end

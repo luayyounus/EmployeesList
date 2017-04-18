@@ -10,6 +10,8 @@
 
 @interface Employee : NSObject
 
-@property(strong,nonatomic) NSString *
+@property int employeeNumber;
+@property int yearsEmployed;
+@property(strong,nonatomic) NSString *managerName;
 
 @end

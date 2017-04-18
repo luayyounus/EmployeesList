@@ -12,6 +12,9 @@
 
 NSString *_name; //underlying instance variable
 
+NSString *_firstName;
+NSString *_lastName;
+int *_age;
 
 ////Getter
 //-(NSString *)name{
@@ -27,6 +30,7 @@ NSString *_name; //underlying instance variable
 -(void)walk{
     
     NSString *name = [self name];
+    
     
     // NSLog is the print statement //%@ is the place holder for name
     NSLog(@"%@ I am walking...", name);

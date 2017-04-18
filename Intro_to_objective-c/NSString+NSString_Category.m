@@ -28,7 +28,6 @@ NSString *seperator = @" ";
     for (index = length -1 ; index >= 0 ; index--){
         unichar character = [myString characterAtIndex:index];
         result = [result stringByAppendingFormat:@"%c", character];
-        
     }
 
     return result;

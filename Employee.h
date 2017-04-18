@@ -13,6 +13,7 @@
 @property NSNumber *employeeNumber;
 @property NSNumber *yearsEmployed;
 @property(strong,nonatomic) NSString *managerName;
+@property (strong,nonatomic)NSString *email;
 
 
 -(NSNumber *)employeeNumber;

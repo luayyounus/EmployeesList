@@ -13,6 +13,7 @@
 NSNumber *_employeeNumber;
 NSNumber *_yearsEmployed;
 NSString *_managerName;
+NSString *_email;
 
 
 

@@ -14,32 +14,55 @@ NSInteger _employeeNumber;
 NSInteger _yearsEmployed;
 NSString *_managerName;
 
-
--(NSInteger)employeeNumber{
-    return _employeeNumber;
-}
--(void)setEmployeeNumber:(NSInteger)employeeNumber{
-    _employeeNumber = employeeNumber;
-}
-
-
-
--(NSInteger)yearsEmployed{
-    return _yearsEmployed;
-}
--(void)setYearsEmployed:(NSInteger)yearsEmployed{
-    _yearsEmployed = yearsEmployed;
+-(instancetype)initWithFirstName:(NSString *)firstName
+                        lastName:(NSString *)lastName
+                             age:(NSNumber *)age
+                   yearsEmployed:(NSNumber *)yearsEmployed
+                      andManager:(NSString *)managerName{
+    self = [super initWithFirstName:firstName lastName:lastName andAge:age];
+    if (self){
+        _yearsEmployed = yearsEmployed;
+        _managerName = managerName;
+        _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(100)];
+    }
+    return self;
 }
 
-
-
--(NSString *)managerName{
-    return _managerName;
+-(id)copyWithZone:(NSZone *)zone{
+    Employee *employee = [super copyWithZone:zone];
+    
+    employee.employeeNumber = self.employeeNumber;
+    employee.managerName = self.managerName;
+    employee.yearsEmployed = self.yearsEmployed;
+    
+    return employee;
 }
--(void)setManagerName:(NSString *)managerName{
-    _managerName = managerName;
-}
-
-
 
 @end
+
+
+//-(NSNumber *)employeeNumber{
+//    return _employeeNumber;
+//}
+//-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
+//    _employeeNumber = employeeNumber;
+//}
+//
+//
+//
+//-(NSNumber *)yearsEmployed{
+//    return _yearsEmployed;
+//}
+//-(void)setYearsEmployed:(NSNumber *)yearsEmployed{
+//    _yearsEmployed = yearsEmployed;
+//}
+
+//
+//
+//-(NSString *)managerName{
+//    return _managerName;
+//}
+//-(void)setManagerName:(NSString *)managerName{
+//    _managerName = managerName;
+//}
+

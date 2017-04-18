@@ -12,7 +12,7 @@
 #import "NSString+NSString_Category.h"
 
 
-static int gMoveNumber = 10;
+//static int gMoveNumber = 10;
 
 @interface ViewController () <ViewControllerDataSource>
 
@@ -25,9 +25,9 @@ static int gMoveNumber = 10;
     
     Person *name = [[Person alloc]init];
     
-    [name setName:@"Luay"];
-    
-    NSString *personName = [name name];
+//    [name setName:@"Luay"];
+//    
+//    NSString *personName = [name name];
     
     [name walk];
     
@@ -37,9 +37,9 @@ static int gMoveNumber = 10;
     
     NSString *phrase = @"This is Bullshit";
     
-    NSArray *resultsOfArray = [phrase stringArray];
+//    NSArray *resultsOfArray = [phrase stringArray];
     
-    NSLog(@"%@ is the Array we got back.", resultsOfArray);
+//    NSLog(@"%@ is the Array we got back.", resultsOfArray);
     
     NSString *reversedString = [NSString reverseStringMethod:phrase];
     
@@ -78,7 +78,7 @@ static int gMoveNumber = 10;
     
     [dictionary setObject:@"dog" forKey:@"pet"];
     
-    NSString *firstName = dictionary[@"firstName"];
+//    NSString *firstName = dictionary[@"firstName"];
     
     dictionary[@"car"] = @"Subaru";
     

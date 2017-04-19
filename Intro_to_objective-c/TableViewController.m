@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+
 @end
 @implementation TableViewController
 
@@ -58,7 +59,10 @@
     }
     
     Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:indexPath.row];
-    cell.textLabel.text = @"%@ %@",employee.firstName, employee.lastName;
+    
+    NSString *fullName = [NSString stringWithFormat: @"%@ %@", employee.firstName, employee.lastName];
+
+    cell.textLabel.text = fullName;
 //    NSLog(@"the label %@",cell.textLabel.text);
     return cell;
 }

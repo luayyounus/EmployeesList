@@ -20,13 +20,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Employee *luay = [[Employee alloc]initWithFirstName:@"Luay" lastName:@"Brandon" age:@57 yearsEmployed:@23 andManager:@"Castro"];
+    Employee *luay = [[Employee alloc]initWithFirstName:@"Luay" lastName:@"Younus" age:@73 yearsEmployed:@44 andManager:@"Castro"];
+    Employee *brandon = [[Employee alloc]initWithFirstName:@"Brandon" lastName:@"Little" age:@22 yearsEmployed:@-43 andManager:@"Zelda"];
+    Employee *sheldon = [[Employee alloc]initWithFirstName:@"Sheldon" lastName:@"Cooper" age:@37 yearsEmployed:@17 andManager:@"CBS"];
+    Employee *peter = [[Employee alloc]initWithFirstName:@"Peter" lastName:@"Griffin" age:@33 yearsEmployed:@0 andManager:@"Family Guy"];
+    Employee *mickey = [[Employee alloc]initWithFirstName:@"Mickey" lastName:@"Mouse" age:@10 yearsEmployed:@43 andManager:@"Walt Disney"];
+    
     
     [[EmployeeDatabase shared] add:luay];
+    [[EmployeeDatabase shared]add:brandon];
+    [[EmployeeDatabase shared]add:sheldon];
+    [[EmployeeDatabase shared]add:peter];
+    [[EmployeeDatabase shared]add:mickey];
+    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    NSLog(@"%@", [[[EmployeeDatabase shared] allEmployees]firstObject]);
+    NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,7 +58,7 @@
     }
     
     Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:indexPath.row];
-    cell.textLabel.text = employee.firstName;
+    cell.textLabel.text = @"%@ %@",employee.firstName, employee.lastName;
 //    NSLog(@"the label %@",cell.textLabel.text);
     return cell;
 }

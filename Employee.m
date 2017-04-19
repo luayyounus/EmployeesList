@@ -39,7 +39,6 @@ NSString *_email;
     return employee;
 }
 
-
 //old way to implement Setters and getters
 //-(NSNumber *)employeeNumber{
 //    return _employeeNumber;
@@ -65,7 +64,5 @@ NSString *_email;
 //-(void)setManagerName:(NSString *)managerName{
 //    _managerName = managerName;
 //}
-
-
 
 @end

@@ -8,7 +8,6 @@
 
 #import "EmployeeDatabase.h"
 
-
 @interface EmployeeDatabase()
 
 @property (strong,nonatomic) NSMutableArray *employees;
@@ -26,9 +25,7 @@
     return self;
 }
 
-
 +(instancetype)shared{
-    
     static EmployeeDatabase *shared = nil;
     
     // Grand Central Dispatch - we got this ugly code from the code snipet in xCode
@@ -69,12 +66,9 @@
     [self.employees removeAllObjects];
 }
 
-
-
 //MARK: Helper Methods
 -(NSURL *)documentsDirectory{
     NSURL *documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
-    
     return documentsDirectoryURL;
 }
 

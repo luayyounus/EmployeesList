@@ -13,10 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
 @end
+
 @implementation TableViewController
-@dynamic tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

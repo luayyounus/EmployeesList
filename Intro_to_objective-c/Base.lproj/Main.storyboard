@@ -76,7 +76,7 @@
                     <navigationItem key="navigationItem" id="Pso-sU-0US">
                         <barButtonItem key="rightBarButtonItem" title="Add Employee" id="eg9-az-GBR">
                             <connections>
-                                <segue destination="y1I-Rk-wlu" kind="showDetail" id="l43-Rz-FOv"/>
+                                <segue destination="y1I-Rk-wlu" kind="presentation" id="l43-Rz-FOv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

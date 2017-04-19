@@ -7,6 +7,9 @@
 //
 
 #import "AddEmployeeViewController.h"
+#import "EmployeeDatabase.h"
+#import "Employee.h"
+#import <UIKit/UIKit.h>
 
 @interface AddEmployeeViewController ()
 
@@ -14,27 +17,33 @@
 @property (weak, nonatomic) IBOutlet UITextField *lastName;
 @property (weak, nonatomic) IBOutlet UITextField *email;
 
-- (IBAction)saveButton:(UIButton *)sender;
-
-- (IBAction)cancelButton:(UIButton *)sender;
-
 @end
 
 @implementation AddEmployeeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)saveButtonAddEmployee:(UIButton *)sender {
-}
+
 - (IBAction)saveButton:(UIButton *)sender {
+    NSString *firstName = self.firstName.text;
+    NSString *lastName = self.lastName.text;
+    NSString *email = self.email.text;
+    
+    Employee *employee = [[Employee alloc]initWithFirstName:(@"%@",firstName) lastName:(@"%@",lastName) age:nil email:(@"%@",email) yearsEmployed:nil andManager:nil];
+    
+    [[EmployeeDatabase shared]add:employee];
+    
+    
 }
 
 - (IBAction)cancelButton:(UIButton *)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 @end

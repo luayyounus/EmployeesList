@@ -40,8 +40,8 @@
     
     [[EmployeeDatabase shared]add:employee];
     
-//    NSLog([[EmployeeDatabase shared]allEmployees]);
-    
+    [self dismissViewControllerAnimated:true completion:nil];
+
 }
 
 - (IBAction)cancelButton:(UIButton *)sender {

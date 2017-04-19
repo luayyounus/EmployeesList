@@ -36,10 +36,11 @@
     NSString *lastName = self.lastName.text;
     NSString *email = self.email.text;
     
-    Employee *employee = [[Employee alloc]initWithFirstName:(@"%@",firstName) lastName:(@"%@",lastName) age:nil email:(@"%@",email) yearsEmployed:nil andManager:nil];
+    Employee *employee = [[Employee alloc]initWithFirstName:firstName lastName:lastName age:nil email:email yearsEmployed:nil andManager:nil];
     
     [[EmployeeDatabase shared]add:employee];
     
+//    NSLog([[EmployeeDatabase shared]allEmployees]);
     
 }
 

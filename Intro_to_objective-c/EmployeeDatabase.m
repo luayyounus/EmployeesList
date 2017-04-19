@@ -22,8 +22,6 @@
     if (self) {
         _employees = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfURL:self.archiveURL]];
         
-        _employees = [[NSMutableArray alloc]init];
-        
         if(!_employees){
             _employees = [[NSMutableArray alloc]init];
         }
@@ -78,6 +76,7 @@
 
 -(void)removeEmployeeAtIndex:(Employee *)employee atIndex:(int)index{
     [self.employees removeObjectAtIndex:index];
+    [self save];
 }
 
 -(void)removeAllEmployees{

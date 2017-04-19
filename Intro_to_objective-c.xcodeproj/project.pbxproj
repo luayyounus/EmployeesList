@@ -18,6 +18,7 @@
 		015C5EF61EA5454C00F34B1F /* ViewController+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF51EA5454C00F34B1F /* ViewController+Identifier.m */; };
 		015C5EFA1EA5682600F34B1F /* NSString+NSString_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */; };
 		015C5F001EA59E1D00F34B1F /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EFF1EA59E1D00F34B1F /* Employee.m */; };
+		01685B861EA6C798003B69D6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01685B851EA6C798003B69D6 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		015C5EFE1EA59E1D00F34B1F /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = ../Employee.h; sourceTree = "<group>"; };
 		015C5EFF1EA59E1D00F34B1F /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = ../Employee.m; sourceTree = "<group>"; };
 		015C5F011EA5A5E800F34B1F /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
+		01685B841EA6C798003B69D6 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		01685B851EA6C798003B69D6 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				015C5EE01EA5250F00F34B1F /* ViewController.h */,
 				015C5EE11EA5250F00F34B1F /* ViewController.m */,
 				015C5EF41EA5454C00F34B1F /* ViewController+Identifier.h */,
+				01685B841EA6C798003B69D6 /* TableViewController.h */,
+				01685B851EA6C798003B69D6 /* TableViewController.m */,
 				015C5EF51EA5454C00F34B1F /* ViewController+Identifier.m */,
 				015C5EF71EA5482400F34B1F /* ViewControllerDataSource.h */,
 				015C5F011EA5A5E800F34B1F /* PersonQueue.h */,
@@ -208,6 +213,7 @@
 				015C5EFA1EA5682600F34B1F /* NSString+NSString_Category.m in Sources */,
 				014379AB1EA687A200C023A1 /* EmployeeDatabase.m in Sources */,
 				015C5EDF1EA5250F00F34B1F /* AppDelegate.m in Sources */,
+				01685B861EA6C798003B69D6 /* TableViewController.m in Sources */,
 				015C5EF61EA5454C00F34B1F /* ViewController+Identifier.m in Sources */,
 				015C5EF31EA52F0700F34B1F /* Person.m in Sources */,
 				015C5EDC1EA5250F00F34B1F /* main.m in Sources */,

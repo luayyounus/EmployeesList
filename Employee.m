@@ -13,8 +13,7 @@
 NSNumber *_employeeNumber;
 NSNumber *_yearsEmployed;
 NSString *_managerName;
-
-
+NSString *_email;
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
@@ -40,33 +39,30 @@ NSString *_managerName;
     return employee;
 }
 
-
-
--(NSNumber *)employeeNumber{
-    return _employeeNumber;
-}
--(void)setEmployeeNumber:(NSNumber *)employeeNumber{
-    _employeeNumber = employeeNumber;
-}
-
-
-
--(NSNumber *)yearsEmployed{
-    return _yearsEmployed;
-}
--(void)setYearsEmployed:(NSNumber *)yearsEmployed{
-    _yearsEmployed = yearsEmployed;
-}
-
-
-
--(NSString *)managerName{
-    return _managerName;
-}
--(void)setManagerName:(NSString *)managerName{
-    _managerName = managerName;
-}
-
-
+//old way to implement Setters and getters
+//-(NSNumber *)employeeNumber{
+//    return _employeeNumber;
+//}
+//-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
+//    _employeeNumber = employeeNumber;
+//}
+//
+//
+//
+//-(NSNumber *)yearsEmployed{
+//    return _yearsEmployed;
+//}
+//-(void)setYearsEmployed:(NSNumber *)yearsEmployed{
+//    _yearsEmployed = yearsEmployed;
+//}
+//
+//
+//
+//-(NSString *)managerName{
+//    return _managerName;
+//}
+//-(void)setManagerName:(NSString *)managerName{
+//    _managerName = managerName;
+//}
 
 @end

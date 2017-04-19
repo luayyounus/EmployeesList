@@ -10,15 +10,22 @@
 
 @interface EmployeeDatabase()
 
-@property (strong,nonatomic) NSArray *employees;
+@property (strong,nonatomic) NSMutableArray *employees;
 
 @end
 
 @implementation EmployeeDatabase
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.employees = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
 
 +(instancetype)shared{
-    
     static EmployeeDatabase *shared = nil;
     
     // Grand Central Dispatch - we got this ugly code from the code snipet in xCode
@@ -32,18 +39,41 @@
     return shared;
 }
 
+-(NSMutableArray *)allEmployees{
+    return self.employees;
+}
+-(NSInteger)count{
+    return [self.employees count];
+}
+
+-(Employee *)employeeAtIndex:(int)index{
+    return [self.employees objectAtIndex:index];
+}
+
+-(void)add:(Employee *)employee{
+    [self.employees addObject:employee];
+}
+
+-(void)remove:(Employee *)employee{
+    [self.employees removeObject:employee];
+}
+
+-(void)removeEmployeeAtIndex:(Employee *)employee atIndex:(int)index{
+    [self.employees removeObjectAtIndex:index];
+}
+
+-(void)removeAllEmployees{
+    [self.employees removeAllObjects];
+}
+
 //MARK: Helper Methods
 -(NSURL *)documentsDirectory{
     NSURL *documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
-    
     return documentsDirectoryURL;
-    
 }
 
 -(NSURL *)archiveURL{
     return [[self documentsDirectory] URLByAppendingPathComponent:@"archive"];
 }
-
-
 
 @end

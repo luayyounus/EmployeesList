@@ -13,12 +13,11 @@
 #import "Employee.h"
 #import "EmployeeDatabase.h"
 
-
-//static int gMoveNumber = 10;
-
 @interface ViewController () <ViewControllerDataSource>
 
 @end
+
+//static int gMoveNumber = 10;
 
 @implementation ViewController
 
@@ -28,21 +27,6 @@
     //accessing the singleton
     [[EmployeeDatabase shared] allEmployees];
     
-//    Employee *original = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed: @2 andManager:@"Brook"];
-//    
-//    Employee *newInstructor = [original copy];
-//    newInstructor.firstName = @"Mike";
-//    
-//    NSLog(original.firstName);
-//    
-//    Person *name = [[Person alloc]init];
-//    
-//    [name setName:@"Luay"];
-//    
-//    NSString *personName = [name name];
-    
-//    [name walk];
-    
     [Person sayHello];
     
     [self requiredNumberForEachItem:443];
@@ -50,13 +34,11 @@
     NSString *phrase = @"This is Bullshit";
     
 //    NSArray *resultsOfArray = [phrase stringArray];
-    
 //    NSLog(@"%@ is the Array we got back.", resultsOfArray);
     
     NSString *reversedString = [NSString reverseStringMethod:phrase];
     
     NSLog(@"%@ is the reversed string.", reversedString);
-    
     
     // Switch and Arrays
     NSNumber *num1 = @123;
@@ -77,7 +59,6 @@
     NSString *string1 = @"One";
     NSString *string2 = @"Two";
     NSString *string3 = @"Three";
-    
     NSNumber *number = @100;
     
     //mutable Array
@@ -94,10 +75,7 @@
     
     dictionary[@"car"] = @"Subaru";
     
-//    EmployeeDatabase *test = [[EmployeeDatabase alloc]init];
-//    
-//    NSLog(@"%@",[test documentsDirectory]);
-//    NSLog(@"%@",[test archiveURL]);
+
 }
 
 -(void)requiredNumberForEachItem:(int)number{
@@ -105,3 +83,17 @@
 }
 
 @end
+
+
+//Zombie code
+//    Employee *original = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed: @2 andManager:@"Brook"];
+//    Employee *newInstructor = [original copy];
+//    newInstructor.firstName = @"Mike";
+//    NSLog(original.firstName);
+//    Person *name = [[Person alloc]init];
+//    [name setName:@"Luay"];
+//    NSString *personName = [name name];
+//    [name walk];
+//    EmployeeDatabase *test = [[EmployeeDatabase alloc]init];
+//    NSLog(@"%@",[test documentsDirectory]);
+//    NSLog(@"%@",[test archiveURL]);

@@ -13,12 +13,11 @@
 @property NSNumber *employeeNumber;
 @property NSNumber *yearsEmployed;
 @property(strong,nonatomic) NSString *managerName;
-
+@property (strong,nonatomic)NSString *email;
 
 -(NSNumber *)employeeNumber;
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber;
 -(NSNumber *)yearsEmployed;
-
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
@@ -27,7 +26,6 @@
                   andManager:(NSString *)managerName;
 
 -(void)setYearsEmployed:(NSNumber *)yearsEmployed;
-
 
 -(NSString *)managerName;
 -(void)setManagerName:(NSString *)managerName;

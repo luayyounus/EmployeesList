@@ -26,7 +26,6 @@
                   andManager:(NSString *)managerName;
 
 -(void)setYearsEmployed:(NSNumber *)yearsEmployed;
-
 -(NSString *)managerName;
 -(void)setManagerName:(NSString *)managerName;
 

@@ -10,13 +10,14 @@
 #import "Employee.h"
 #import "EmployeeDatabase.h"
 
-@interface TableViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface TableViewController() <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end
 @implementation TableViewController
+@dynamic tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,8 +28,7 @@
     Employee *peter = [[Employee alloc]initWithFirstName:@"Peter" lastName:@"Griffin" age:@33 yearsEmployed:@0 andManager:@"Family Guy"];
     Employee *mickey = [[Employee alloc]initWithFirstName:@"Mickey" lastName:@"Mouse" age:@10 yearsEmployed:@43 andManager:@"Walt Disney"];
     
-    
-    [[EmployeeDatabase shared] add:luay];
+    [[EmployeeDatabase shared]add:luay];
     [[EmployeeDatabase shared]add:brandon];
     [[EmployeeDatabase shared]add:sheldon];
     [[EmployeeDatabase shared]add:peter];
@@ -44,7 +44,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -52,21 +51,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
     Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:indexPath.row];
-    
     NSString *fullName = [NSString stringWithFormat: @"%@ %@", employee.firstName, employee.lastName];
 
     cell.textLabel.text = fullName;
 //    NSLog(@"the label %@",cell.textLabel.text);
     return cell;
 }
-
-
 
 @end

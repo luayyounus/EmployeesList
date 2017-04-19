@@ -11,9 +11,9 @@
 @interface Employee : Person <NSCopying>
 
 @property NSNumber *employeeNumber;
+@property (strong,nonatomic)NSString *email;
 @property NSNumber *yearsEmployed;
 @property(strong,nonatomic) NSString *managerName;
-@property (strong,nonatomic)NSString *email;
 
 -(NSNumber *)employeeNumber;
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber;
@@ -22,6 +22,7 @@
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
                              age:(NSNumber *)age
+                           email:(NSString *)email
                    yearsEmployed:(NSNumber *)yearsEmployed
                   andManager:(NSString *)managerName;
 

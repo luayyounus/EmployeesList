@@ -11,17 +11,19 @@
 @implementation Employee
 
 NSNumber *_employeeNumber;
+NSString *_email;
 NSNumber *_yearsEmployed;
 NSString *_managerName;
-NSString *_email;
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
                              age:(NSNumber *)age
+                           email:(NSString *)email
                    yearsEmployed:(NSNumber *)yearsEmployed
                       andManager:(NSString *)managerName{
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     if (self){
+        _email = email;
         _yearsEmployed = yearsEmployed;
         _managerName = managerName;
         _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(100)];

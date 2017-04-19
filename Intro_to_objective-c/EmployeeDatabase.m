@@ -68,10 +68,12 @@
 
 -(void)add:(Employee *)employee{
     [self.employees addObject:employee];
+    [self save];
 }
 
 -(void)remove:(Employee *)employee{
     [self.employees removeObject:employee];
+    [self save];
 }
 
 -(void)removeEmployeeAtIndex:(Employee *)employee atIndex:(int)index{
@@ -80,6 +82,7 @@
 
 -(void)removeAllEmployees{
     [self.employees removeAllObjects];
+    [self save];
 }
 
 //MARK: Helper Methods

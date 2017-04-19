@@ -7,37 +7,31 @@
 //
 
 #import "TableViewController.h"
-#import "Employee.h"
 #import "EmployeeDatabase.h"
 
-@interface TableViewController() <UITableViewDataSource, UITableViewDelegate>
+@interface TableViewController() <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
 @end
+
 @implementation TableViewController
-@dynamic tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Employee *luay = [[Employee alloc]initWithFirstName:@"Luay" lastName:@"Younus" age:@73 yearsEmployed:@44 andManager:@"Castro"];
-    Employee *brandon = [[Employee alloc]initWithFirstName:@"Brandon" lastName:@"Little" age:@22 yearsEmployed:@-43 andManager:@"Zelda"];
-    Employee *sheldon = [[Employee alloc]initWithFirstName:@"Sheldon" lastName:@"Cooper" age:@37 yearsEmployed:@17 andManager:@"CBS"];
-    Employee *peter = [[Employee alloc]initWithFirstName:@"Peter" lastName:@"Griffin" age:@33 yearsEmployed:@0 andManager:@"Family Guy"];
-    Employee *mickey = [[Employee alloc]initWithFirstName:@"Mickey" lastName:@"Mouse" age:@10 yearsEmployed:@43 andManager:@"Walt Disney"];
-    
-    [[EmployeeDatabase shared]add:luay];
-    [[EmployeeDatabase shared]add:brandon];
-    [[EmployeeDatabase shared]add:sheldon];
-    [[EmployeeDatabase shared]add:peter];
-    [[EmployeeDatabase shared]add:mickey];
-    
     self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+//    self.tableView.delegate = self;
+    
+    [self.tableView reloadData];
     
     NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning {

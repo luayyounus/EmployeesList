@@ -8,46 +8,50 @@
 
 #import "TableViewController.h"
 #import "Employee.h"
+#import "EmployeeDatabase.h"
 
 @interface TableViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *employeeLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
-
 @implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    Employee *luay = [[Employee alloc]initWithFirstName:@"Luay" lastName:@"Brandon" age:@57 yearsEmployed:@23 andManager:@"Castro"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[EmployeeDatabase shared] add:luay];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    NSLog(@"%@", [[[EmployeeDatabase shared] allEmployees]firstObject]);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
 #pragma mark - Table view data source
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return [allEmployees count]
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    static NSString *cellId = @"cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-//    
-//    self.cell.employeeLabel.text = employeeArray[indexPath.row];
-//    
-//    return cell;
-//}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [[[EmployeeDatabase shared] allEmployees] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    
+    Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:indexPath.row];
+    cell.textLabel.text = employee.firstName;
+//    NSLog(@"the label %@",cell.textLabel.text);
+    return cell;
+}
 
 
 

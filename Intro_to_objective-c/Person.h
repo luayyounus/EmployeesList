@@ -17,11 +17,6 @@
 
 -(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName andAge:(NSNumber *)age;
 
-
-//name accessor methods
-//-(NSString *)name;
-//-(void)setName:(NSString *)name;
-
 //Instance Method
 -(void)walk;
 

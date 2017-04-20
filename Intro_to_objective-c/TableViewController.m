@@ -9,7 +9,7 @@
 #import "TableViewController.h"
 #import "EmployeeDatabase.h"
 
-@interface TableViewController() <UITableViewDataSource>
+@interface TableViewController() <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -26,11 +26,19 @@
     [self.tableView reloadData];
     
     NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
+    
+    self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.7];
+
+    
+//    self.navigationController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"greyWallpaper.jpg"]];
+//    self.tableView.backgroundColor = [UIColor clearColor];
+
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.tableView reloadData];
+
 
 }
 
@@ -58,4 +66,14 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[EmployeeDatabase shared]removeEmployeeAtIndex:indexPath.row];
+        [self.tableView reloadData];
+    }
+}
+
+- (IBAction)doneButton:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
 @end

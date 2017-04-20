@@ -11,7 +11,7 @@
 #import "Employee.h"
 #import <UIKit/UIKit.h>
 
-@interface AddEmployeeViewController ()
+@interface AddEmployeeViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *firstName;
 @property (weak, nonatomic) IBOutlet UITextField *lastName;
@@ -24,10 +24,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+
+    self.firstName.delegate = self;
+    self.lastName.delegate= self;
+    self.email.delegate = self;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"HEEEY");
+    [[self view]endEditing:YES];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    return YES;
+}
+
+
+- (void)hideKeyboard{
+    [_firstName resignFirstResponder];
+    [_lastName resignFirstResponder];
+    [_email resignFirstResponder];
 }
 
 
@@ -48,3 +67,4 @@
     [self dismissViewControllerAnimated:true completion:nil];
 }
 @end
+

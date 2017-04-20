@@ -14,6 +14,7 @@
 #import "EmployeeDatabase.h"
 
 @interface ViewController () <ViewControllerDataSource>
+- (IBAction)exitButton:(UIButton *)sender;
 
 @end
 
@@ -82,6 +83,10 @@
     
 }
 
+- (IBAction)exitButton:(UIButton *)sender {
+    @throw NSInternalInconsistencyException;
+    
+}
 @end
 
 

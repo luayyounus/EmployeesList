@@ -26,7 +26,6 @@
     [self.tableView reloadData];
     
     NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
-    
 //    self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.9];
 }
 
@@ -53,7 +52,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
-    Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:indexPath.row];
+    Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:(int)indexPath.row];
     NSString *fullName = [NSString stringWithFormat: @"%@ %@", employee.firstName, employee.lastName];
 
     cell.textLabel.text = fullName;
@@ -63,7 +62,7 @@
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [[EmployeeDatabase shared]removeEmployeeAtIndex:indexPath.row];
+        [[EmployeeDatabase shared]removeEmployeeAtIndex:(int)indexPath.row];
         [self.tableView reloadData];
     }
 }

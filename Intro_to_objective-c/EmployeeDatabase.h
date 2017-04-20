@@ -20,7 +20,7 @@
 
 -(void)add:(Employee *)employee;
 -(void)remove:(Employee *)employee;
--(void)removeEmployeeAtIndex:(Employee *)employee atIndex:(int)index;
+-(void)removeEmployeeAtIndex:(int)index;
 -(void)removeAllEmployees;
 
 @end

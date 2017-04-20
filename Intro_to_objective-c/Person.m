@@ -28,7 +28,6 @@ NSString *_firstName; //underlying instance variable
     
     NSString *firstName = [self firstName];
     
-    // NSLog is the print statement //%@ is the place holder for name
     NSLog(@"%@ I am walking...", firstName);
 }
 

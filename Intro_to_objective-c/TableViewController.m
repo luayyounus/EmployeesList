@@ -9,7 +9,7 @@
 #import "TableViewController.h"
 #import "EmployeeDatabase.h"
 
-@interface TableViewController() <UITableViewDataSource>
+@interface TableViewController() <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -26,11 +26,13 @@
     [self.tableView reloadData];
     
     NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
+//    self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.9];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.tableView reloadData];
+
 
 }
 
@@ -50,7 +52,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
-    Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:indexPath.row];
+    Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:(int)indexPath.row];
     NSString *fullName = [NSString stringWithFormat: @"%@ %@", employee.firstName, employee.lastName];
 
     cell.textLabel.text = fullName;
@@ -58,4 +60,14 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[EmployeeDatabase shared]removeEmployeeAtIndex:(int)indexPath.row];
+        [self.tableView reloadData];
+    }
+}
+
+- (IBAction)doneButton:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
 @end

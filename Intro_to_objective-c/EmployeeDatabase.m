@@ -74,7 +74,7 @@
     [self save];
 }
 
--(void)removeEmployeeAtIndex:(Employee *)employee atIndex:(int)index{
+-(void)removeEmployeeAtIndex: (int)index{
     [self.employees removeObjectAtIndex:index];
     [self save];
 }

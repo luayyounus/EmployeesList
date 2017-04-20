@@ -27,12 +27,7 @@
     
     NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
     
-    self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.7];
-
-    
-//    self.navigationController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"greyWallpaper.jpg"]];
-//    self.tableView.backgroundColor = [UIColor clearColor];
-
+//    self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.9];
 }
 
 -(void)viewDidAppear:(BOOL)animated{

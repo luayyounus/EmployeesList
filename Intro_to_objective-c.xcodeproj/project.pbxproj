@@ -14,10 +14,10 @@
 		015C5EE51EA5250F00F34B1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015C5EE31EA5250F00F34B1F /* Main.storyboard */; };
 		015C5EE71EA5250F00F34B1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015C5EE61EA5250F00F34B1F /* Assets.xcassets */; };
 		015C5EEA1EA5250F00F34B1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015C5EE81EA5250F00F34B1F /* LaunchScreen.storyboard */; };
-		015C5EF31EA52F0700F34B1F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF21EA52F0700F34B1F /* Person.m */; };
+		015C5EF31EA52F0700F34B1F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF21EA52F0700F34B1F /* Person.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		015C5EF61EA5454C00F34B1F /* ViewController+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF51EA5454C00F34B1F /* ViewController+Identifier.m */; };
 		015C5EFA1EA5682600F34B1F /* NSString+NSString_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */; };
-		015C5F001EA59E1D00F34B1F /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EFF1EA59E1D00F34B1F /* Employee.m */; };
+		015C5F001EA59E1D00F34B1F /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EFF1EA59E1D00F34B1F /* Employee.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		01685B861EA6C798003B69D6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01685B851EA6C798003B69D6 /* TableViewController.m */; };
 		01DD6FF11EA8034900398DCE /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DD6FF01EA8034900398DCE /* AddEmployeeViewController.m */; };
 /* End PBXBuildFile section */

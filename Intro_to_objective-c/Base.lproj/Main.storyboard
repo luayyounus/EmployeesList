@@ -201,9 +201,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Employee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQl-E8-Tbm">
-                                        <rect key="frame" x="29" y="30" width="318" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Employee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQl-E8-Tbm">
+                                        <rect key="frame" x="30" y="30" width="315" height="50"/>
                                         <color key="backgroundColor" red="0.7694122779" green="0.58699351870000005" blue="0.25200237730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fA1-wl-fhE"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -212,23 +215,22 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="fQl-E8-Tbm" firstAttribute="top" secondItem="JXk-JQ-8mO" secondAttribute="top" constant="30" id="4Va-go-d8p"/>
                                     <constraint firstItem="tAJ-e0-2ML" firstAttribute="leading" secondItem="JXk-JQ-8mO" secondAttribute="leading" id="5AN-ZO-5qA"/>
                                     <constraint firstItem="2KT-gr-it0" firstAttribute="centerX" secondItem="JXk-JQ-8mO" secondAttribute="centerX" id="5bG-my-GbJ"/>
                                     <constraint firstItem="bY0-yZ-AAm" firstAttribute="centerX" secondItem="JXk-JQ-8mO" secondAttribute="centerX" id="5px-OI-tod"/>
-                                    <constraint firstAttribute="trailing" secondItem="fQl-E8-Tbm" secondAttribute="trailing" constant="28" id="AeW-Ab-8Ur"/>
+                                    <constraint firstItem="fQl-E8-Tbm" firstAttribute="leading" secondItem="JXk-JQ-8mO" secondAttribute="leading" constant="30" id="8Fm-oa-KGK"/>
                                     <constraint firstItem="2KT-gr-it0" firstAttribute="top" secondItem="JXk-JQ-8mO" secondAttribute="top" constant="145" id="HbE-MX-rBe"/>
                                     <constraint firstItem="bY0-yZ-AAm" firstAttribute="top" secondItem="2KT-gr-it0" secondAttribute="bottom" constant="50" id="MVu-O0-7x1"/>
                                     <constraint firstAttribute="centerX" secondItem="2KT-gr-it0" secondAttribute="centerX" id="RIu-xB-hct"/>
                                     <constraint firstItem="j1T-AX-f3B" firstAttribute="top" secondItem="bY0-yZ-AAm" secondAttribute="bottom" constant="50" id="S9k-vJ-JAc"/>
                                     <constraint firstItem="2KT-gr-it0" firstAttribute="centerX" secondItem="tAJ-e0-2ML" secondAttribute="centerX" id="TCW-dg-igi"/>
-                                    <constraint firstItem="fQl-E8-Tbm" firstAttribute="leading" secondItem="JXk-JQ-8mO" secondAttribute="leading" constant="29" id="WTM-hi-hT7"/>
                                     <constraint firstItem="Snt-n4-p3l" firstAttribute="centerX" secondItem="JXk-JQ-8mO" secondAttribute="centerX" constant="-82" id="aS7-i9-bBr"/>
                                     <constraint firstAttribute="bottom" secondItem="GHO-Yv-TmR" secondAttribute="bottom" constant="30" id="ajf-8m-1qn"/>
                                     <constraint firstItem="tAJ-e0-2ML" firstAttribute="top" secondItem="JXk-JQ-8mO" secondAttribute="top" id="gSx-Wt-yFF"/>
                                     <constraint firstAttribute="bottom" secondItem="Snt-n4-p3l" secondAttribute="bottom" constant="30" id="kFt-We-xSf"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQl-E8-Tbm" secondAttribute="trailing" constant="30" id="pVm-Vl-zDU"/>
+                                    <constraint firstItem="fQl-E8-Tbm" firstAttribute="top" secondItem="JXk-JQ-8mO" secondAttribute="top" constant="30" id="qPw-7S-hQG"/>
                                     <constraint firstItem="GHO-Yv-TmR" firstAttribute="centerX" secondItem="JXk-JQ-8mO" secondAttribute="centerX" constant="81" id="uBC-KZ-hnu"/>
-                                    <constraint firstItem="fQl-E8-Tbm" firstAttribute="width" secondItem="tAJ-e0-2ML" secondAttribute="width" constant="-57" id="yLd-ju-naW"/>
                                     <constraint firstItem="j1T-AX-f3B" firstAttribute="centerX" secondItem="JXk-JQ-8mO" secondAttribute="centerX" id="yqA-bZ-26d"/>
                                 </constraints>
                             </view>

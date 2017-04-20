@@ -10,14 +10,10 @@
 
 @interface Employee : Person <NSCopying, NSCoding>
 
-@property NSNumber *employeeNumber;
+@property (strong,nonatomic)NSNumber *employeeNumber;
 @property (strong,nonatomic)NSString *email;
-@property NSNumber *yearsEmployed;
+@property (strong,nonatomic)NSNumber *yearsEmployed;
 @property(strong,nonatomic) NSString *managerName;
-
--(NSNumber *)employeeNumber;
--(void)setEmployeeNumber:(NSNumber *)employeeNumber;
--(NSNumber *)yearsEmployed;
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
@@ -26,8 +22,6 @@
                    yearsEmployed:(NSNumber *)yearsEmployed
                   andManager:(NSString *)managerName;
 
--(void)setYearsEmployed:(NSNumber *)yearsEmployed;
--(NSString *)managerName;
--(void)setManagerName:(NSString *)managerName;
+
 
 @end

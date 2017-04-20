@@ -12,6 +12,33 @@
 
 NSString *_firstName; //underlying instance variable
 
+-(void)setFirstName:(NSString *)firstName{
+    if (_firstName != firstName){
+        [_firstName retain];
+        [firstName release];
+        
+        _firstName = firstName;
+    }
+}
+-(void)setLastName:(NSString *)lastName{
+    if(_lastName != lastName){
+        [_lastName retain];
+        [lastName release];
+        
+        _lastName = lastName;
+    }
+}
+
+-(void)setAge:(NSNumber *)age{
+    if (_age != age){
+        [_age retain];
+        [age release];
+        
+        _age = age;
+    }
+}
+
+
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
                           andAge:(NSNumber *)age {

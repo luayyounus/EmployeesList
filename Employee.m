@@ -10,25 +10,17 @@
 
 @implementation Employee
 
-NSNumber *_employeeNumber;
-NSString *_email;
-NSNumber *_yearsEmployed;
-NSString *_managerName;
-
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber{
-    if (_employeeNumber == employeeNumber){
+    if (_employeeNumber != employeeNumber){
         [employeeNumber retain];
         [_employeeNumber release];
-        
+
         _employeeNumber = employeeNumber;
     }
 }
--(NSNumber *)employeeNumber{
-    return _employeeNumber;
-}
 
 -(void)setEmail:(NSString *)email{
-    if (_email == email){
+    if (_email != email){
         [email retain];
         [_email release];
         
@@ -36,31 +28,22 @@ NSString *_managerName;
     }
 }
 
--(NSString *)email{
-    return _email;
-}
-
 -(void)setYearsEmployed:(NSNumber *)yearsEmployed{
-    if(_yearsEmployed == yearsEmployed){
+    if(_yearsEmployed != yearsEmployed){
         [yearsEmployed retain];
         [yearsEmployed release];
         
         _yearsEmployed = yearsEmployed;
     }
 }
--(NSNumber *)yearsEmployed{
-    return _yearsEmployed;
-}
 
 -(void)setManagerName:(NSString *)managerName{
-    if(_managerName == managerName){
+    if(_managerName != managerName){
         [managerName retain];
         [_managerName release];
+        
         _managerName = managerName;
     }
-}
--(NSString *)managerName{
-    return _managerName;
 }
 
 -(instancetype)initWithFirstName:(NSString *)firstName
@@ -105,11 +88,9 @@ NSString *_managerName;
 
 -(id)copyWithZone:(NSZone *)zone{
     Employee *employee = [super copyWithZone:zone];
-    
     employee.employeeNumber = self.employeeNumber;
     employee.managerName = self.managerName;
     employee.yearsEmployed = self.yearsEmployed;
-    
     return employee;
 }
 @end

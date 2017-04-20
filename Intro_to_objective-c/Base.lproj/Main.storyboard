@@ -242,7 +242,6 @@
                             <constraint firstItem="JXk-JQ-8mO" firstAttribute="top" secondItem="aaS-Y8-DMu" secondAttribute="top" id="n4Q-2m-nn4"/>
                         </constraints>
                     </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="email" destination="j1T-AX-f3B" id="BBo-wQ-OH1"/>
                         <outlet property="firstName" destination="2KT-gr-it0" id="D7w-ET-dt8"/>

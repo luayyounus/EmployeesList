@@ -12,12 +12,9 @@
 
 static void *kvoContext = &kvoContext;
 
-@interface EmployeeViewController () <UITableViewDataSource>
+@interface EmployeeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-- (IBAction)doneButton:(UIBarButtonItem *)sender;
-
 
 @end
 
@@ -30,11 +27,6 @@ static void *kvoContext = &kvoContext;
     
     [[EmployeeDatabase shared] addObserver:self forKeyPath:@"employees" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld | NSKeyValueChangeInsertion | NSKeyValueChangeRemoval context:nil];
 
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
 }
 
 -(void)dealloc{
@@ -74,8 +66,12 @@ static void *kvoContext = &kvoContext;
     }
 }
 
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//}
+
 - (IBAction)doneButton:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:true completion:nil];
-
+    
 }
 @end

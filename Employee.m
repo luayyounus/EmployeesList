@@ -54,10 +54,10 @@
                       andManager:(NSString *)managerName{
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     if (self){
-        _email = email;
-        _yearsEmployed = yearsEmployed;
-        _managerName = managerName;
-        _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(100)];
+        [self setEmail:email];
+        [self setYearsEmployed:yearsEmployed];
+        [self setManagerName:managerName];
+        [self setEmployeeNumber: [NSNumber numberWithInt:arc4random_uniform(100)]];
     }
     return self;
 }

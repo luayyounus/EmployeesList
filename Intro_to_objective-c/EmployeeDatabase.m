@@ -16,11 +16,10 @@
 
 @implementation EmployeeDatabase
 
-- (instancetype)init
-{
+- (instancetype)init{
     self = [super init];
     if (self) {
-        _employees = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfURL:self.archiveURL]];
+        _employees = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfURL:[self archiveURL]]];
         
         if(!_employees){
             _employees = [[NSMutableArray alloc]init];
@@ -31,7 +30,7 @@
 }
 
 -(void)save {
-    BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:self.archiveURL.path];
+    BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:[self archiveURL].path];
     [self willChangeValueForKey:@"employees"];
 
     if(success){

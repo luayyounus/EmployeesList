@@ -38,29 +38,11 @@ NSString *_firstName; //underlying instance variable
     }
 }
 
-
--(instancetype)initWithFirstName:(NSString *)firstName
-                        lastName:(NSString *)lastName
-                          andAge:(NSNumber *)age {
-    self = [super init];
-    if (self) {
-        _firstName = firstName;
-        _lastName = lastName;
-        _age = age;
-    }
-    return self;
-}
-
 -(void)walk{
     
     NSString *firstName = [self firstName];
     
     NSLog(@"%@ I am walking...", firstName);
-}
-
-//class method
-+(void)sayHello{
-    NSLog(@"Hello!");
 }
 
 -(id)copyWithZone:(NSZone *)zone{
@@ -71,6 +53,23 @@ NSString *_firstName; //underlying instance variable
     person.age = self.age;
     
     return person;
+}
+
+-(instancetype)initWithFirstName:(NSString *)firstName
+                        lastName:(NSString *)lastName
+                          andAge:(NSNumber *)age {
+    self = [super init];
+    if (self) {
+        [self setFirstName:firstName];
+        [self setLastName:lastName];
+        [self setAge:age];
+    }
+    return self;
+}
+
+//class method
++(void)sayHello{
+    NSLog(@"Hello!");
 }
 
 @end

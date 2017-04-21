@@ -245,7 +245,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Done" id="YQV-Ww-CKw">
                             <color key="tintColor" red="0.7694122779" green="0.58699351870000005" blue="0.25200237730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="doneButton:" destination="f7W-i7-2zk" id="alO-dL-KrC"/>
+                                <action selector="doneButton:" destination="f7W-i7-2zk" id="9cW-tc-KIW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Enu-Pa-bfJ">

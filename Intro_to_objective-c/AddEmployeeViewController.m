@@ -36,7 +36,6 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSLog(@"HEEEY");
     [[self view]endEditing:YES];
     return YES;
 }

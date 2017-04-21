@@ -20,13 +20,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    
-//    ViewController *myViewController = [[ViewController alloc]init];
-//    
-//    NSString *identifier = [myViewController identifier];
-    
-//    NSLog(@"%i", gMoveNumber);
     
     return YES;
 }

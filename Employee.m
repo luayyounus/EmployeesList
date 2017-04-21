@@ -10,10 +10,41 @@
 
 @implementation Employee
 
-NSNumber *_employeeNumber;
-NSString *_email;
-NSNumber *_yearsEmployed;
-NSString *_managerName;
+-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
+    if (_employeeNumber != employeeNumber){
+        [employeeNumber retain];
+        [_employeeNumber release];
+
+        _employeeNumber = employeeNumber;
+    }
+}
+
+-(void)setEmail:(NSString *)email{
+    if (_email != email){
+        [email retain];
+        [_email release];
+        
+        _email = email;
+    }
+}
+
+-(void)setYearsEmployed:(NSNumber *)yearsEmployed{
+    if(_yearsEmployed != yearsEmployed){
+        [yearsEmployed retain];
+        [yearsEmployed release];
+        
+        _yearsEmployed = yearsEmployed;
+    }
+}
+
+-(void)setManagerName:(NSString *)managerName{
+    if(_managerName != managerName){
+        [managerName retain];
+        [_managerName release];
+        
+        _managerName = managerName;
+    }
+}
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
@@ -23,10 +54,10 @@ NSString *_managerName;
                       andManager:(NSString *)managerName{
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     if (self){
-        _email = email;
-        _yearsEmployed = yearsEmployed;
-        _managerName = managerName;
-        _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(100)];
+        [self setEmail:email];
+        [self setYearsEmployed:yearsEmployed];
+        [self setManagerName:managerName];
+        [self setEmployeeNumber: [NSNumber numberWithInt:arc4random_uniform(100)]];
     }
     return self;
 }
@@ -57,11 +88,9 @@ NSString *_managerName;
 
 -(id)copyWithZone:(NSZone *)zone{
     Employee *employee = [super copyWithZone:zone];
-    
     employee.employeeNumber = self.employeeNumber;
     employee.managerName = self.managerName;
     employee.yearsEmployed = self.yearsEmployed;
-    
     return employee;
 }
 @end

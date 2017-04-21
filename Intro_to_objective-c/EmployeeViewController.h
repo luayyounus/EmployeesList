@@ -1,14 +1,13 @@
 //
-//  TableViewController.h
+//  EmployeeViewController.h
 //  Intro_to_objective-c
 //
-//  Created by Luay Younus on 4/18/17.
+//  Created by Luay Younus on 4/20/17.
 //  Copyright © 2017 Luay Younus. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
-
+@interface EmployeeViewController : UIViewController
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		014379AB1EA687A200C023A1 /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 014379AA1EA687A200C023A1 /* EmployeeDatabase.m */; };
+		014E35481EA98110006A954B /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014E35471EA98110006A954B /* EmployeeViewController.m */; };
 		015C5EDC1EA5250F00F34B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EDB1EA5250F00F34B1F /* main.m */; };
 		015C5EDF1EA5250F00F34B1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EDE1EA5250F00F34B1F /* AppDelegate.m */; };
 		015C5EE21EA5250F00F34B1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EE11EA5250F00F34B1F /* ViewController.m */; };
@@ -18,13 +19,14 @@
 		015C5EF61EA5454C00F34B1F /* ViewController+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF51EA5454C00F34B1F /* ViewController+Identifier.m */; };
 		015C5EFA1EA5682600F34B1F /* NSString+NSString_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EF91EA5682600F34B1F /* NSString+NSString_Category.m */; };
 		015C5F001EA59E1D00F34B1F /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5EFF1EA59E1D00F34B1F /* Employee.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		01685B861EA6C798003B69D6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01685B851EA6C798003B69D6 /* TableViewController.m */; };
 		01DD6FF11EA8034900398DCE /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DD6FF01EA8034900398DCE /* AddEmployeeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		014379A91EA687A200C023A1 /* EmployeeDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDatabase.h; sourceTree = "<group>"; };
 		014379AA1EA687A200C023A1 /* EmployeeDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDatabase.m; sourceTree = "<group>"; };
+		014E35461EA98110006A954B /* EmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
+		014E35471EA98110006A954B /* EmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
 		015C5ED71EA5250F00F34B1F /* Intro_to_objective-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intro_to_objective-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015C5EDB1EA5250F00F34B1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		015C5EDD1EA5250F00F34B1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,8 +47,6 @@
 		015C5EFE1EA59E1D00F34B1F /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = ../Employee.h; sourceTree = "<group>"; };
 		015C5EFF1EA59E1D00F34B1F /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = ../Employee.m; sourceTree = "<group>"; };
 		015C5F011EA5A5E800F34B1F /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
-		01685B841EA6C798003B69D6 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		01685B851EA6C798003B69D6 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		01DD6FEF1EA8034900398DCE /* AddEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEmployeeViewController.h; sourceTree = "<group>"; };
 		01DD6FF01EA8034900398DCE /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,8 +84,8 @@
 				015C5F041EA5A67300F34B1F /* Controller */,
 				015C5F031EA5A66E00F34B1F /* Model */,
 				015C5F021EA5A65D00F34B1F /* View */,
-				015C5EEB1EA5250F00F34B1F /* Info.plist */,
 				015C5EDA1EA5250F00F34B1F /* Supporting Files */,
+				015C5EEB1EA5250F00F34B1F /* Info.plist */,
 			);
 			path = "Intro_to_objective-c";
 			sourceTree = "<group>";
@@ -128,9 +128,9 @@
 			children = (
 				015C5EE01EA5250F00F34B1F /* ViewController.h */,
 				015C5EE11EA5250F00F34B1F /* ViewController.m */,
-				01685B841EA6C798003B69D6 /* TableViewController.h */,
-				01685B851EA6C798003B69D6 /* TableViewController.m */,
 				01DD6FEF1EA8034900398DCE /* AddEmployeeViewController.h */,
+				014E35461EA98110006A954B /* EmployeeViewController.h */,
+				014E35471EA98110006A954B /* EmployeeViewController.m */,
 				01DD6FF01EA8034900398DCE /* AddEmployeeViewController.m */,
 				015C5EF41EA5454C00F34B1F /* ViewController+Identifier.h */,
 				015C5EF51EA5454C00F34B1F /* ViewController+Identifier.m */,
@@ -219,10 +219,10 @@
 				01DD6FF11EA8034900398DCE /* AddEmployeeViewController.m in Sources */,
 				014379AB1EA687A200C023A1 /* EmployeeDatabase.m in Sources */,
 				015C5EDF1EA5250F00F34B1F /* AppDelegate.m in Sources */,
-				01685B861EA6C798003B69D6 /* TableViewController.m in Sources */,
 				015C5EF61EA5454C00F34B1F /* ViewController+Identifier.m in Sources */,
 				015C5EF31EA52F0700F34B1F /* Person.m in Sources */,
 				015C5EDC1EA5250F00F34B1F /* main.m in Sources */,
+				014E35481EA98110006A954B /* EmployeeViewController.m in Sources */,
 				015C5F001EA59E1D00F34B1F /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

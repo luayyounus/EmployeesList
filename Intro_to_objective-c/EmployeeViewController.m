@@ -1,43 +1,33 @@
 //
-//  TableViewController.m
+//  EmployeeViewController.m
 //  Intro_to_objective-c
 //
-//  Created by Luay Younus on 4/18/17.
+//  Created by Luay Younus on 4/20/17.
 //  Copyright © 2017 Luay Younus. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "EmployeeViewController.h"
+#import "Employee.h"
 #import "EmployeeDatabase.h"
 
-@interface TableViewController() <UITableViewDataSource, UITableViewDelegate>
+@interface EmployeeViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation TableViewController
+@implementation EmployeeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // Do any additional setup after loading the view.
     self.tableView.dataSource = self;
-//    self.tableView.delegate = self;
     
-    [self.tableView reloadData];
-    
-    NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
-//    self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.9];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self.tableView reloadData];
-
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Table view data source
@@ -54,9 +44,9 @@
     
     Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:(int)indexPath.row];
     NSString *fullName = [NSString stringWithFormat: @"%@ %@", employee.firstName, employee.lastName];
-
+    
     cell.textLabel.text = fullName;
-//    NSLog(@"the label %@",cell.textLabel.text);
+    //    NSLog(@"the label %@",cell.textLabel.text);
     return cell;
 }
 
@@ -70,4 +60,5 @@
 - (IBAction)doneButton:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:true completion:nil];
 }
+
 @end

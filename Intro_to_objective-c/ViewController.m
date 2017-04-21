@@ -25,10 +25,6 @@
 
     [[EmployeeDatabase shared] allEmployees];
     
-    [Person sayHello];
-    
-    [self requiredNumberForEachItem:443];
-    
     NSString *phrase = @"This is my string";
     
     NSString *reversedString = [NSString reverseStringMethod:phrase];
@@ -58,18 +54,7 @@
     NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:string1,string2,string3, nil];
     
     [array addObject:number];
-    
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary:@{@"firstName":@"Adam",@"lastName":@"Wallraff",@"age":@30}];
-    
-    [dictionary setObject:@"dog" forKey:@"pet"];
-    
-    dictionary[@"car"] = @"Subaru";
-    
 
-}
-
--(void)requiredNumberForEachItem:(int)number{
-    
 }
 
 - (IBAction)exitButton:(UIButton *)sender {

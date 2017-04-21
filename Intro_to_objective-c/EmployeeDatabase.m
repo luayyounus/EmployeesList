@@ -26,24 +26,28 @@
             _employees = [[NSMutableArray alloc]init];
         }
     }
+
     return self;
 }
 
 -(void)save {
     BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:self.archiveURL.path];
-    
+    [self willChangeValueForKey:@"employees"];
+
     if(success){
-        NSLog(@"Saved Employees");
+        NSLog(@"Saved Employee");
     } else {
         NSLog(@"Save Failed!");
     }
+    [self didChangeValueForKey:@"employees"];
+}
+
++ (BOOL)automaticallyNotifiesObserversOfEmployees{
+    return NO;
 }
 
 +(instancetype)shared{
     static EmployeeDatabase *shared = nil;
-    
-    // Grand Central Dispatch - we got this ugly code from the code snipet in xCode
-    //for safety we nil out the Singleton shared then create the dispatch only once to avoid stacking multiple instances of the singleton over each others
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

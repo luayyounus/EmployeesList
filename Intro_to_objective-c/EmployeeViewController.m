@@ -10,9 +10,14 @@
 #import "Employee.h"
 #import "EmployeeDatabase.h"
 
+static void *kvoContext = &kvoContext;
+
 @interface EmployeeViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)doneButton:(UIBarButtonItem *)sender;
+
 
 @end
 
@@ -23,11 +28,24 @@
     // Do any additional setup after loading the view.
     self.tableView.dataSource = self;
     
+    [[EmployeeDatabase shared] addObserver:self forKeyPath:@"employees" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld | NSKeyValueChangeInsertion | NSKeyValueChangeRemoval context:nil];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+}
+
+-(void)dealloc{
+    [[EmployeeDatabase shared] removeObserver:self forKeyPath:@"employees"];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    
+    if ([keyPath isEqualToString:@"employees"]) {
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - Table view data source
@@ -46,7 +64,6 @@
     NSString *fullName = [NSString stringWithFormat: @"%@ %@", employee.firstName, employee.lastName];
     
     cell.textLabel.text = fullName;
-    //    NSLog(@"the label %@",cell.textLabel.text);
     return cell;
 }
 
@@ -59,6 +76,6 @@
 
 - (IBAction)doneButton:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:true completion:nil];
-}
 
+}
 @end

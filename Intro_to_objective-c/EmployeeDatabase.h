@@ -22,6 +22,5 @@
 -(void)remove:(Employee *)employee;
 -(void)removeEmployeeAtIndex:(int)index;
 -(void)removeAllEmployees;
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context;
 
 @end

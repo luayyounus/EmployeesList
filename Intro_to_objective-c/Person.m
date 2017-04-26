@@ -10,8 +10,6 @@
 
 @implementation Person
 
-NSString *_firstName; //underlying instance variable
-
 -(void)setFirstName:(NSString *)firstName{
     if (_firstName != firstName){
         [_firstName retain];
@@ -45,6 +43,20 @@ NSString *_firstName; //underlying instance variable
     NSLog(@"%@ I am walking...", firstName);
 }
 
+-(instancetype)initWithFirstName:(NSString *)firstName
+                        lastName:(NSString *)lastName
+                          andAge:(NSNumber *)age {
+    self = [super init];
+    if (self) {
+        
+        //We dont need to manually Retain the properties in the init because it's being handled in Person.h
+        [self setFirstName:firstName];
+        [self setLastName:lastName];
+        [self setAge:age];
+    }
+    return self;
+}
+
 -(id)copyWithZone:(NSZone *)zone{
     Person *person = [[[self class]alloc]init];
     
@@ -55,16 +67,13 @@ NSString *_firstName; //underlying instance variable
     return person;
 }
 
--(instancetype)initWithFirstName:(NSString *)firstName
-                        lastName:(NSString *)lastName
-                          andAge:(NSNumber *)age {
-    self = [super init];
-    if (self) {
-        [self setFirstName:firstName];
-        [self setLastName:lastName];
-        [self setAge:age];
-    }
-    return self;
+-(void)dealloc{
+    
+    [_firstName release];
+    [_lastName release];
+    [_age release];
+    
+    [super dealloc];
 }
 
 //class method

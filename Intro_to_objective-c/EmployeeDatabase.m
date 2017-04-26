@@ -31,19 +31,18 @@
 
 -(void)save {
     BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:[self archiveURL].path];
+    
     [self willChangeValueForKey:@"employees"];
+    [self didChangeValueForKey:@"employees"];
 
     if(success){
         NSLog(@"Saved Employee");
     } else {
         NSLog(@"Save Failed!");
     }
-    [self didChangeValueForKey:@"employees"];
 }
 
-+ (BOOL)automaticallyNotifiesObserversOfEmployees{
-    return NO;
-}
+
 
 +(instancetype)shared{
     static EmployeeDatabase *shared = nil;

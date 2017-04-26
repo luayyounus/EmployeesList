@@ -46,6 +46,10 @@
     }
 }
 
++(BOOL)automaticallyNotifiesObserversOfEmployees{
+    return NO;
+}
+
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
                              age:(NSNumber *)age
@@ -54,9 +58,12 @@
                       andManager:(NSString *)managerName{
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     if (self){
-        [self setEmail:email];
-        [self setYearsEmployed:yearsEmployed];
-        [self setManagerName:managerName];
+        [_email retain];
+        [_yearsEmployed retain];
+        [_managerName retain];
+//        [self setEmail:email];
+//        [self setYearsEmployed:yearsEmployed];
+//        [self setManagerName:managerName];
         [self setEmployeeNumber: [NSNumber numberWithInt:arc4random_uniform(100)]];
     }
     return self;

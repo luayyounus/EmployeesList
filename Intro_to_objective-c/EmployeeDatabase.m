@@ -16,16 +16,25 @@
 
 @implementation EmployeeDatabase
 
++(instancetype)shared{
+    static EmployeeDatabase *shared = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[[self class]alloc]init];
+    });
+    return shared;
+}
+
 - (instancetype)init{
     self = [super init];
     if (self) {
-        _employees = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfURL:[self archiveURL]]];
+        _employees = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfURL:self.archiveURL]];
         
-        if(!_employees){
+        if (! _employees) {
             _employees = [[NSMutableArray alloc]init];
         }
     }
-
     return self;
 }
 
@@ -42,19 +51,6 @@
     }
 }
 
-
-
-+(instancetype)shared{
-    static EmployeeDatabase *shared = nil;
-
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        // this "^" tells us its a block
-        shared = [[[self class]alloc]init];
-    });
-    return shared;
-}
-
 -(NSMutableArray *)allEmployees{
     return self.employees;
 }
@@ -62,7 +58,7 @@
     return [self.employees count];
 }
 
--(Employee *)employeeAtIndex:(int)index{
+-(Employee *)employeeAtIndex:(NSInteger)index{
     return [self.employees objectAtIndex:index];
 }
 
@@ -76,7 +72,7 @@
     [self save];
 }
 
--(void)removeEmployeeAtIndex: (int)index{
+-(void)removeEmployeeAtIndex: (NSInteger)index{
     [self.employees removeObjectAtIndex:index];
     [self save];
 }

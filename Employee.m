@@ -10,6 +10,22 @@
 
 @implementation Employee
 
+-(instancetype)initWithFirstName:(NSString *)firstName
+                        lastName:(NSString *)lastName
+                             age:(NSNumber *)age
+                           email:(NSString *)email
+                   yearsEmployed:(NSNumber *)yearsEmployed
+                      andManager:(NSString *)managerName{
+    self = [super initWithFirstName:firstName lastName:lastName andAge:age];
+    if(self){
+        _yearsEmployed = yearsEmployed;
+        _managerName = managerName;
+        _email = email;
+        _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
+    }
+    return self;
+}
+
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber{
     if (_employeeNumber != employeeNumber){
         [employeeNumber retain];
@@ -46,27 +62,18 @@
     }
 }
 
-+(BOOL)automaticallyNotifiesObserversOfEmployees{
-    return NO;
+-(void)dealloc{
+    
+    [_employeeNumber release];
+    [_email release];
+    [_yearsEmployed release];
+    [_yearsEmployed release];
+    
+    [super dealloc];
 }
 
--(instancetype)initWithFirstName:(NSString *)firstName
-                        lastName:(NSString *)lastName
-                             age:(NSNumber *)age
-                           email:(NSString *)email
-                   yearsEmployed:(NSNumber *)yearsEmployed
-                      andManager:(NSString *)managerName{
-    self = [super initWithFirstName:firstName lastName:lastName andAge:age];
-    if (self){
-        [_email retain];
-        [_yearsEmployed retain];
-        [_managerName retain];
-//        [self setEmail:email];
-//        [self setYearsEmployed:yearsEmployed];
-//        [self setManagerName:managerName];
-        [self setEmployeeNumber: [NSNumber numberWithInt:arc4random_uniform(100)]];
-    }
-    return self;
++(BOOL)automaticallyNotifiesObserversOfEmployees{
+    return NO;
 }
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{

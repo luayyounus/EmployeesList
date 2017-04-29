@@ -62,16 +62,6 @@
     }
 }
 
--(void)dealloc{
-    
-    [_employeeNumber release];
-    [_email release];
-    [_yearsEmployed release];
-    [_yearsEmployed release];
-    
-    [super dealloc];
-}
-
 +(BOOL)automaticallyNotifiesObserversOfEmployees{
     return NO;
 }
@@ -106,5 +96,15 @@
     employee.managerName = self.managerName;
     employee.yearsEmployed = self.yearsEmployed;
     return employee;
+}
+
+-(void)dealloc{
+    
+    [_employeeNumber release];
+    [_email release];
+    [_yearsEmployed release];
+    [_yearsEmployed release];
+    
+    [super dealloc];
 }
 @end

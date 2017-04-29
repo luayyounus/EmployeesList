@@ -39,7 +39,7 @@
 }
 
 -(void)save {
-    BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:[self archiveURL].path];
+    BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:self.archiveURL.path];
     
     [self willChangeValueForKey:@"employees"];
     [self didChangeValueForKey:@"employees"];

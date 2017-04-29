@@ -49,11 +49,12 @@
 
 
 - (IBAction)saveButton:(UIButton *)sender {
-    NSString *firstName = self.firstName.text;
-    NSString *lastName = self.lastName.text;
-    NSString *email = self.email.text;
     
-    Employee *employee = [[Employee alloc]initWithFirstName:firstName lastName:lastName age:nil email:email yearsEmployed:nil andManager:nil];
+    Employee *employee = [[Employee alloc]initWithFirstName:self.firstName.text
+                                                   lastName:self.lastName.text
+                                                        age:nil
+                                                      email:self.email.text
+                                              yearsEmployed:nil andManager:nil];
     
     [[EmployeeDatabase shared]add:employee];
     

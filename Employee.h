@@ -10,8 +10,8 @@
 
 @interface Employee : Person <NSCopying, NSCoding>
 
-@property(strong,nonatomic)NSNumber *employeeNumber;
 @property(strong,nonatomic)NSString *email;
+@property(strong,nonatomic)NSNumber *employeeNumber;
 @property(strong,nonatomic)NSNumber *yearsEmployed;
 @property(strong,nonatomic) NSString *managerName;
 

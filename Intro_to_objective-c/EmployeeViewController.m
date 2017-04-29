@@ -52,7 +52,7 @@ static void *kvoContext = &kvoContext;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
-    Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:(int)indexPath.row];
+    Employee *employee = [[EmployeeDatabase shared] employeeAtIndex:(NSInteger)indexPath.row];
     NSString *fullName = [NSString stringWithFormat: @"%@ %@", employee.firstName, employee.lastName];
     
     cell.textLabel.text = fullName;
@@ -61,14 +61,14 @@ static void *kvoContext = &kvoContext;
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [[EmployeeDatabase shared]removeEmployeeAtIndex:(int)indexPath.row];
+        [[EmployeeDatabase shared]removeEmployeeAtIndex:(NSInteger)indexPath.row];
         [self.tableView reloadData];
     }
 }
 
 //-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    
-//}
+
 
 - (IBAction)doneButton:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:true completion:nil];

@@ -15,12 +15,12 @@
 
 -(NSMutableArray *)allEmployees;
 -(NSInteger)count;
-
--(Employee *)employeeAtIndex:(int)index;
+-(Employee *)employeeAtIndex:(NSInteger)index;
 
 -(void)add:(Employee *)employee;
 -(void)remove:(Employee *)employee;
--(void)removeEmployeeAtIndex:(int)index;
+-(void)removeEmployeeAtIndex:(NSInteger)index;
 -(void)removeAllEmployees;
+
 
 @end

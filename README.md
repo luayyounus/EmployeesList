@@ -1,5 +1,5 @@
 # Project Name: Employees List
-#### Project Concept: Contact list that stores employees email addresses and their career information.
+#### Project Concept: Contact list that stores employees email addresses and their employment information.
 
 #### Features Used
 1) Automatic Reference Counting (ARC) to manage memory.

@@ -29,15 +29,15 @@ static void *kvoContext = &kvoContext;
 
 }
 
--(void)dealloc{
-    [[EmployeeDatabase shared] removeObserver:self forKeyPath:@"employees"];
-}
-
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     
-    if ([keyPath isEqualToString:@"employees"]) {
+    if ([[NSString stringWithFormat:@"%@",keyPath] isEqualToString:[NSString stringWithFormat:@"employees"]]){
         [self.tableView reloadData];
     }
+}
+
+-(void)dealloc{
+    [[EmployeeDatabase shared] removeObserver:self forKeyPath:@"employees"];
 }
 
 #pragma mark - Table view data source
@@ -56,6 +56,8 @@ static void *kvoContext = &kvoContext;
     NSString *fullName = [NSString stringWithFormat: @"%@ %@", employee.firstName, employee.lastName];
     
     cell.textLabel.text = fullName;
+    
+    cell.detailTextLabel.text = employee.email;
     return cell;
 }
 
@@ -64,10 +66,7 @@ static void *kvoContext = &kvoContext;
         [[EmployeeDatabase shared]removeEmployeeAtIndex:(NSInteger)indexPath.row];
         [self.tableView reloadData];
     }
-}
-
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    
+}  
 
 
 - (IBAction)doneButton:(UIBarButtonItem *)sender {

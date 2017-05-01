@@ -103,7 +103,7 @@
     [_employeeNumber release];
     [_email release];
     [_yearsEmployed release];
-    [_yearsEmployed release];
+    [_managerName release];
     
     [super dealloc];
 }

@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *firstName;
 @property (weak, nonatomic) IBOutlet UITextField *lastName;
 @property (weak, nonatomic) IBOutlet UITextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *age;
+@property (weak, nonatomic) IBOutlet UITextField *yearsEmployed;
+
 
 @end
 
@@ -31,6 +34,8 @@
     self.firstName.delegate = self;
     self.lastName.delegate= self;
     self.email.delegate = self;
+    self.age.delegate = self;
+    self.yearsEmployed.delegate = self;
     
 }
 
@@ -45,16 +50,19 @@
     [_firstName resignFirstResponder];
     [_lastName resignFirstResponder];
     [_email resignFirstResponder];
+    [_age resignFirstResponder];
+    [_yearsEmployed resignFirstResponder];
 }
 
 
 - (IBAction)saveButton:(UIButton *)sender {
     
-    Employee *employee = [[Employee alloc]initWithFirstName:self.firstName.text
-                                                   lastName:self.lastName.text
-                                                        age:nil
-                                                      email:self.email.text
-                                              yearsEmployed:nil andManager:nil];
+    Employee *employee = [[Employee alloc]initWithFirstName:[NSString stringWithFormat:@"%@", self.firstName.text]
+                                                   lastName:[NSString stringWithFormat:@"%@", self.lastName.text]
+                                                        age:[NSNumber numberWithFloat:[self.age.text floatValue]]
+                                                      email:[NSString stringWithFormat:@"%@", self.email.text]
+                                              yearsEmployed:[NSNumber numberWithFloat:[self.yearsEmployed.text floatValue]]
+                                                 andManager:nil];
     
     [[EmployeeDatabase shared]add:employee];
     

@@ -18,10 +18,8 @@
                         lastName:(NSString *)lastName
                           andAge:(NSNumber *)age;
 
-//Instance Method
 -(void)walk;
 
-//Class Method
 +(void)sayHello;
 
 @end

@@ -74,7 +74,6 @@
     return person;
 }
 
-//class method
 +(void)sayHello{
     NSLog(@"Hello!");
 }

@@ -29,36 +29,32 @@
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber{
     if (_employeeNumber != employeeNumber){
         [employeeNumber retain];
-        [_employeeNumber release];
-
         _employeeNumber = employeeNumber;
+        [_employeeNumber release];
     }
 }
 
 -(void)setEmail:(NSString *)email{
     if (_email != email){
         [email retain];
-        [_email release];
-        
         _email = email;
+        [_email release];
     }
 }
 
 -(void)setYearsEmployed:(NSNumber *)yearsEmployed{
     if(_yearsEmployed != yearsEmployed){
         [yearsEmployed retain];
-        [yearsEmployed release];
-        
         _yearsEmployed = yearsEmployed;
+        [yearsEmployed release];
     }
 }
 
 -(void)setManagerName:(NSString *)managerName{
     if(_managerName != managerName){
         [managerName retain];
-        [_managerName release];
-        
         _managerName = managerName;
+        [_managerName release];
     }
 }
 

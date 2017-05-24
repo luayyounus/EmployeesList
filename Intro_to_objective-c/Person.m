@@ -25,26 +25,23 @@
 -(void)setFirstName:(NSString *)firstName{
     if (_firstName != firstName){
         [_firstName retain];
-        [firstName release];
-        
         _firstName = firstName;
+        [firstName release];
     }
 }
 -(void)setLastName:(NSString *)lastName{
     if(_lastName != lastName){
         [_lastName retain];
-        [lastName release];
-        
         _lastName = lastName;
+        [lastName release];
     }
 }
 
 -(void)setAge:(NSNumber *)age{
     if (_age != age){
         [_age retain];
-        [age release];
-        
         _age = age;
+        [age release];
     }
 }
 
